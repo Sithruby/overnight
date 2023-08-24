@@ -116,7 +116,7 @@ $(function() {
         }
       },
     ],
-
+    /*
     views: [
       {
         namespace: 'home', afterEnter({ next }) {
@@ -147,6 +147,7 @@ $(function() {
         }
       }
     ],
+    */
   });
 
   barba.hooks.enter(() => {
@@ -155,5 +156,8 @@ $(function() {
 
   barba.hooks.after(() => {
     butter.init( { cancelOnTouch: true } );
+    var script = document.createElement('script');
+    script.src = 'public/scripts/main.js';
+    next.container.appendChild(script);
   });
 });
