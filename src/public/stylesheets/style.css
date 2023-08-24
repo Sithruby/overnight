@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Playfair+Display:wght@500&family=Public+Sans:wght@500&display=swap');
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+.cursor {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: 100% 100%;
+    pointer-events: none;
+    transition: background, transform 300ms ease-in-out;
+}
+
+.link-hover {
+    border: 0 solid #000;
+    transform: scale(2);
+    background: hsl(210, 30%, 80%);
+}
+
+.link-hovered {
+    color: #000;
+}
+
+.navLinks {
+    transition: color 300ms ease-in-out;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Public Sans', sans-serif;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+}
+
+.her-name {
+    font-size: 13rem;
+    animation: lights 9s ease-in-out infinite alternate;
+}
+
+h2 {
+    font-family: 'La Belle Aurore', cursive;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.bg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -10;
+    pointer-events: none;
+}
+
+.bg-image {
+    background-image: url('../img/guillaume-bleyer-XDzsY752ahY-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    border: #000;
+}
+
+.loading-screen {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    background-color: hsl(210, 30%, 40%);
+    width: 0%;
+    height: 100%;
+}
+
+.load-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+@keyframes lights {
+    0% {
+        text-shadow: 0 0 48px hsla(0, 0%, 100%, 0.4);
+    }
+    20% {
+        text-shadow: 0 0 48px hsla(0, 0%, 100%, 0.5);
+    }
+    30% {
+        text-shadow: 0 0 48px hsla(0, 0%, 100%, 0.3);
+    }
+    40% {
+        text-shadow: 0 0 48px hsla(0, 0%, 100%, 0.6);
+    }
+    60% {
+        text-shadow: 0 0 48px hsla(0, 0%, 100%, 0.4);
+    }
+    70% {
+        text-shadow: 0 0 48px hsla(0, 0%, 100%, 0.3);
+    }
+    80% {
+        text-shadow: 0 0 48px hsla(0, 0%, 100%, 0.6);
+    }
+    90% {
+        text-shadow: 0 0 48px hsla(0, 0%, 100%, 0.4);
+    }
+    100% {
+        text-shadow: 0 0 48px hsla(0, 0%, 100%, 0.3);
+    }
+}
