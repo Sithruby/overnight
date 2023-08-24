@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "predeploy": "parcel build src/index.html --public-url https://samadhilk.github.io/overnight/",
-    "deploy": "gh-pages -d dist"
+    "start": "npx parcel src/index.html",
+    "predeploy": "parcel build src/index.html --dist-dir ./docs --public-url https://samadhilk.github.io/overnight/docs/",
+    "deploy": "gh-pages -d docs"
   },
   "keywords": [],
   "author": "sama",
