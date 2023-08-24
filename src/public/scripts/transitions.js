@@ -1,34 +1,36 @@
-var mouseCursor = document.querySelector('.cursor');
-var navLinks = document.querySelectorAll('.navLinks');
+function cursorFx() {
+  var mouseCursor = document.querySelector('.cursor');
+  var navLinks = document.querySelectorAll('.navLinks');
 
-window.addEventListener('mousemove', cursor);
+  window.addEventListener('mousemove', cursor);
 
-function cursor(e) {
-    mouseCursor.style.top = e.pageY + 'px';
-    mouseCursor.style.left = e.pageX + 'px';
+  function cursor(e) {
+      mouseCursor.style.top = e.pageY + 'px';
+      mouseCursor.style.left = e.pageX + 'px';
 
+  }
+
+  navLinks.forEach(link => {
+      link.addEventListener('mouseleave', () => {
+          mouseCursor.classList.remove('link-hover');
+      });
+      link.addEventListener('click', () => {
+          mouseCursor.classList.remove('link-hover');
+      });
+      link.addEventListener('mouseover', () => {
+          mouseCursor.classList.add('link-hover');
+      });
+      link.addEventListener('mouseleave', () => {
+          link.classList.remove('link-hovered');
+      });
+      link.addEventListener('click', () => {
+          link.classList.remove('link-hovered');
+      });
+      link.addEventListener('mouseover', () => {
+          link.classList.add('link-hovered');
+      });
+  });
 }
-
-navLinks.forEach(link => {
-    link.addEventListener('mouseleave', () => {
-        mouseCursor.classList.remove('link-hover');
-    });
-    link.addEventListener('click', () => {
-        mouseCursor.classList.remove('link-hover');
-    });
-    link.addEventListener('mouseover', () => {
-        mouseCursor.classList.add('link-hover');
-    });
-    link.addEventListener('mouseleave', () => {
-        link.classList.remove('link-hovered');
-    });
-    link.addEventListener('click', () => {
-        link.classList.remove('link-hovered');
-    });
-    link.addEventListener('mouseover', () => {
-        link.classList.add('link-hovered');
-    });
-});
 
 function delay(n) {
   n = n || 2000;
@@ -148,37 +150,29 @@ $(function() {
         }
       },
     ],
-    /*
+
     views: [
       {
         namespace: 'home', afterEnter({ next }) {
-          let script = document.createElement('script');
-          script.src = 'public/scripts/main.js';
-          next.container.appendChild(script);
+          cursorFx();
         }
       },
       {
         namespace: 'art', afterEnter({ next }) {
-          let script = document.createElement('script');
-          script.src = 'public/scripts/main.js';
-          next.container.appendChild(script);
+          cursorFx();
         }
       },
       {
         namespace: 'about', afterEnter({ next }) {
-          let script = document.createElement('script');
-          script.src = 'public/scripts/main.js';
-          next.container.appendChild(script);
+          cursorFx();
         }
       },
       {
         namespace: 'hire', afterEnter({ next }) {
-          let script = document.createElement('script');
-          script.src = 'public/scripts/main.js';
-          next.container.appendChild(script);
+          cursorFx();
         }
       }
-    ],*/
+    ],
   });
 
   barba.hooks.enter(() => {
@@ -187,8 +181,6 @@ $(function() {
 
   barba.hooks.after(() => {
     butter.init( { cancelOnTouch: true } );
-    var script = document.createElement('script');
-    script.src = 'public/scripts/main.js';
-    next.container.appendChild(script);
+    cursorFx();
   });
 });
