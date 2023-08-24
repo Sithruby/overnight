@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "predeploy": "rm -rf dist && parcel build ./*.html --public-url https://github.com/samadhilk/overnight/",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "sama",
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.9.3"
+  },
+  "dependencies": {
+    "gh-pages": "^6.0.0"
   }
 }
