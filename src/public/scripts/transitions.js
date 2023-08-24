@@ -7,7 +7,6 @@ function cursorFx() {
   function cursor(e) {
       mouseCursor.style.top = e.pageY + 'px';
       mouseCursor.style.left = e.pageX + 'px';
-
   }
 
   navLinks.forEach(link => {
@@ -181,6 +180,5 @@ $(function() {
 
   barba.hooks.after(() => {
     butter.init( { cancelOnTouch: true } );
-    cursorFx();
   });
 });
