@@ -116,7 +116,7 @@ $(function() {
         }
       },
     ],
-    /*
+    
     views: [
       {
         namespace: 'home', afterEnter({ next }) {
@@ -147,7 +147,6 @@ $(function() {
         }
       }
     ],
-    */
   });
 
   barba.hooks.enter(() => {
