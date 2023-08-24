@@ -4,30 +4,12 @@
     display: none;
 }
 
-.cursor {
-    position: absolute;
-    width: 3rem;
-    height: 3rem;
-    border: 1px solid white;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transform-origin: 100% 100%;
-    pointer-events: none;
-    transition: background, transform 300ms ease-in-out;
-}
-
-.link-hover {
-    border: 0 solid #000;
-    transform: scale(2);
-    background: hsl(210, 30%, 80%);
-}
-
-.link-hovered {
-    color: #000;
-}
-
 .navLinks {
     transition: color 300ms ease-in-out;
+}
+
+.navLinks:hover {
+    color: #000;
 }
 
 body {
