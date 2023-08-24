@@ -2,9 +2,8 @@
   "name": "overnight-2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "predeploy": "rm -rf dist && parcel build ./*.html --public-url https://github.com/samadhilk/overnight/",
+    "predeploy": "parcel build src/index.html --public-url https://samadhilk.github.io/overnight/",
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],
