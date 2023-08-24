@@ -52,7 +52,7 @@ h1 {
 }
 
 .her-name {
-    font-size: 13rem;
+    font-size: 10rem;
     animation: lights 9s ease-in-out infinite alternate;
 }
 
@@ -76,7 +76,7 @@ main {
 }
 
 .bg-image {
-    background-image: url('../img/guillaume-bleyer-XDzsY752ahY-unsplash.jpg');
+    background-image: url('../images/guillaume-bleyer-XDzsY752ahY-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
