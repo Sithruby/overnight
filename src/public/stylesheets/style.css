@@ -35,7 +35,6 @@ h1 {
 
 .her-name {
     font-size: 10rem;
-    animation: lights 9s ease-in-out infinite alternate;
 }
 
 h2 {
@@ -84,34 +83,4 @@ main {
     overflow: hidden;
     z-index: 1000;
     pointer-events: none;
-}
-
-@keyframes lights {
-    0% {
-        text-shadow: 0 0 48px hsla(0, 0%, 100%, 0.4);
-    }
-    20% {
-        text-shadow: 0 0 48px hsla(0, 0%, 100%, 0.5);
-    }
-    30% {
-        text-shadow: 0 0 48px hsla(0, 0%, 100%, 0.3);
-    }
-    40% {
-        text-shadow: 0 0 48px hsla(0, 0%, 100%, 0.6);
-    }
-    60% {
-        text-shadow: 0 0 48px hsla(0, 0%, 100%, 0.4);
-    }
-    70% {
-        text-shadow: 0 0 48px hsla(0, 0%, 100%, 0.3);
-    }
-    80% {
-        text-shadow: 0 0 48px hsla(0, 0%, 100%, 0.6);
-    }
-    90% {
-        text-shadow: 0 0 48px hsla(0, 0%, 100%, 0.4);
-    }
-    100% {
-        text-shadow: 0 0 48px hsla(0, 0%, 100%, 0.3);
-    }
 }
