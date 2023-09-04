@@ -1,11 +1,10 @@
 {
-  "name": "overnight-2",
+  "name": "overnight",
   "version": "1.0.0",
   "description": "",
   "scripts": {
     "start": "npx parcel src/index.html --dist-dir ./docs",
     "predeploy": "parcel build src/index.html --dist-dir ./docs --public-url https://samadhilk.github.io/overnight/",
-    "deploy": "gh-pages -d docs"
   },
   "keywords": [],
   "author": "sama",
