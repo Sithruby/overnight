@@ -5,11 +5,13 @@
 }
 
 .navLinks {
-    transition: color 300ms ease-in-out;
+    color: hsl(0, 0%, 90%);
+    transition: all 300ms ease-in-out;
 }
 
 .navLinks:hover {
-    color: #000;
+    color: hsl(0, 0%, 100%);
+    text-shadow: 0 5px 15px #afe0f5;
 }
 
 body {
@@ -35,6 +37,10 @@ h1 {
 
 .her-name {
     font-size: 10rem;
+}
+
+.visibility {
+    opacity: 0;
 }
 
 h2 {

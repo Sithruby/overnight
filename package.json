@@ -1,9 +1,9 @@
 {
   "name": "overnight",
-  "version": "1.0.0",
+  "version": "1.2.6",
   "description": "",
   "scripts": {
-    "start": "npx parcel src/index.html --dist-dir ./docs",
+    "start": "npx parcel src/index.html --dist-dir ./docs/ --port 1208 --open",
     "predeploy": "parcel build src/index.html --dist-dir ./docs --public-url https://samadhilk.github.io/overnight/"
   },
   "keywords": [],

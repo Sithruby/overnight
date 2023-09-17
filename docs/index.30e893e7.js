@@ -38,7 +38,7 @@ function slideIn() {
     var tl = gsap.timeline();
     tl.from(".slide-in", {
         duration: 2,
-        x: -20,
+        transform: "translateX(-20px)",
         opacity: 0,
         stagger: .2
     }, "+=2");
@@ -60,12 +60,12 @@ function fadeOut() {
 }
 function herName() {
     var tl = gsap.timeline();
-    let typeSplit = new SplitType(".her-name", {
+    const typeSplit = new SplitType(".her-name", {
         types: "words, chars"
     });
-    let chars = typeSplit.chars;
+    const chars = typeSplit.chars;
     tl.from(chars, {
-        y: "20%",
+        transform: "translateY(50px)",
         opacity: 0,
         duration: 3,
         ease: "power4.inOut",
@@ -78,7 +78,7 @@ function slideTop() {
     tl.from(".slide-top", {
         duration: 2,
         opacity: 0,
-        y: 30,
+        transform: "translateY(-30px)",
         stagger: .2,
         delay: 1
     });
@@ -112,40 +112,6 @@ $(function() {
                     fadeOut();
                 }
             }
-        ],
-        views: [
-            {
-                namespace: "home",
-                afterEnter ({ next: next1 }) {
-                    let script = document.createElement("script");
-                    script.src = "public/scripts/main.js";
-                    next1.container.appendChild(script);
-                }
-            },
-            {
-                namespace: "art",
-                afterEnter ({ next: next1 }) {
-                    let script = document.createElement("script");
-                    script.src = "public/scripts/main.js";
-                    next1.container.appendChild(script);
-                }
-            },
-            {
-                namespace: "about",
-                afterEnter ({ next: next1 }) {
-                    let script = document.createElement("script");
-                    script.src = "public/scripts/main.js";
-                    next1.container.appendChild(script);
-                }
-            },
-            {
-                namespace: "hire",
-                afterEnter ({ next: next1 }) {
-                    let script = document.createElement("script");
-                    script.src = "public/scripts/main.js";
-                    next1.container.appendChild(script);
-                }
-            }
         ]
     });
     barba.hooks.enter(()=>{
@@ -155,9 +121,6 @@ $(function() {
         butter.init({
             cancelOnTouch: true
         });
-        var script = document.createElement("script");
-        script.src = "public/scripts/main.js";
-        next.container.appendChild(script);
     });
 });
 
