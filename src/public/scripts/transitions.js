@@ -42,7 +42,7 @@ function slideIn() {
   var tl = gsap.timeline();
   tl.from(
     ".slide-in",
-    { duration: 2, x: -20, opacity: 0, stagger: .2 },
+    { duration: 2, transform: "translateX(-20px)", opacity: 0, stagger: .2 },
     "+=2"
   );
 }
@@ -60,25 +60,26 @@ function fadeOut() {
 function herName() {
   var tl = gsap.timeline();
 
-  let typeSplit = new SplitType(".her-name", {
+  const typeSplit = new SplitType(".her-name", {
     types: "words, chars",
   });
 
-  let chars = typeSplit.chars;
+  const chars = typeSplit.chars;
 
   tl.from(chars, {
-    y: "20%",
+    transform: "translateY(50px)",
     opacity: 0,
     duration: 3,
     ease: "power4.inOut",
     stagger: 0.05,
     delay: 1,
   });
+
 }
 
 function slideTop() {
   var tl = gsap.timeline();
-  tl.from(".slide-top", { duration: 2, opacity: 0, y: 30, stagger: .2, delay: 1 });
+  tl.from(".slide-top", { duration: 2, opacity: 0, transform: "translateY(-30px)", stagger: .2, delay: 1 });
 }
 
 $(function() {
