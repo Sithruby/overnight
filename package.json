@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "npx parcel src/index.html --dist-dir ./docs/ --port 1208 --open",
-    "predeploy": "parcel build src/index.html --dist-dir ./docs --public-url https://samadhilk.github.io/overnight/"
+    "build": "parcel build src/index.html --dist-dir ./docs --public-url https://samadhi1311.github.io/overnight/"
   },
   "keywords": [],
   "author": "sama",
