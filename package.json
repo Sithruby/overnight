@@ -7,7 +7,7 @@
     "build": "parcel build src/index.html --dist-dir ./docs --public-url https://samadhi1311.github.io/overnight/"
   },
   "keywords": [],
-  "author": "sama",
+  "author": "samadhi1311",
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.9.3"
