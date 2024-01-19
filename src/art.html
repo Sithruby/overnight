@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OVERNIGHT</title>
-    <script src="https://cdn.tailwindcss.com"></script>  
-    <link rel="stylesheet" href="public/stylesheets/style.css">
-    <link rel="stylesheet" href="public/stylesheets/art.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://unpkg.com/@barba/core"></script>
-    <script src="https://unpkg.com/split-type"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
 </head>
 
 <body data-barba="wrapper">
-    
+
     <div class="load-container">
         <div class="loading-screen"></div>
     </div>
@@ -23,57 +17,105 @@
         <div class="bg-image fade-in"></div>
     </div>
 
-    <main data-barba="container" data-barba-namespace="art" class="p-0 m-0 transition-this fade-out" id="butter">
+    <main data-barba="container" data-barba-namespace="art" class="transition-this fade-out main-container" id="butter">
 
-        <header class="flex flex-row items-start pt-8 pb-4 pl-2 ml-16 fade-in">
+        <header class="navigation-back">
             <nav>
-                <ul class="flex flex-row text-lg text-white list-none">
-                    <li><a href="index.html" class="navLinks">
-                        <svg width="32px" height="32px" viewBox="0 -6.5 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <title>left-arrow</title>
-                            <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g id="ui-gambling-website-lined-icnos-casinoshunter" transform="translate(-342.000000, -159.000000)" fill="#ffffff" fill-rule="nonzero">
-                                    <g id="square-filled" transform="translate(50.000000, 120.000000)">
-                                        <path d="M317.108012,39.2902857 L327.649804,49.7417043 L327.708994,49.7959169 C327.889141,49.9745543 327.986143,50.2044182 328,50.4382227 L328,50.5617773 C327.986143,50.7955818 327.889141,51.0254457 327.708994,51.2040831 L327.6571,51.2479803 L317.108012,61.7097143 C316.717694,62.0967619 316.084865,62.0967619 315.694547,61.7097143 C315.30423,61.3226668 315.30423,60.6951387 315.694547,60.3080911 L324.702666,51.3738496 L292.99947,51.3746291 C292.447478,51.3746291 292,50.9308997 292,50.3835318 C292,49.8361639 292.447478,49.3924345 292.99947,49.3924345 L324.46779,49.3916551 L315.694547,40.6919089 C315.30423,40.3048613 315.30423,39.6773332 315.694547,39.2902857 C316.084865,38.9032381 316.717694,38.9032381 317.108012,39.2902857 Z M327.115357,50.382693 L316.401279,61.0089027 L327.002151,50.5002046 L327.002252,50.4963719 L326.943142,50.442585 L326.882737,50.382693 L327.115357,50.382693 Z" id="left-arrow" transform="translate(310.000000, 50.500000) scale(-1, 1) translate(-310.000000, -50.500000) "> </path>
+                <ul class="back-arrow slide-in">
+                    <li><a href="index.html" class="nav-link">
+                            <svg width="32px" height="32px" viewBox="0 -6.5 36 36" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <title>left-arrow</title>
+                                <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="ui-gambling-website-lined-icnos-casinoshunter"
+                                        transform="translate(-342.000000, -159.000000)" fill="#ffffff"
+                                        fill-rule="nonzero">
+                                        <g id="square-filled" transform="translate(50.000000, 120.000000)">
+                                            <path
+                                                d="M317.108012,39.2902857 L327.649804,49.7417043 L327.708994,49.7959169 C327.889141,49.9745543 327.986143,50.2044182 328,50.4382227 L328,50.5617773 C327.986143,50.7955818 327.889141,51.0254457 327.708994,51.2040831 L327.6571,51.2479803 L317.108012,61.7097143 C316.717694,62.0967619 316.084865,62.0967619 315.694547,61.7097143 C315.30423,61.3226668 315.30423,60.6951387 315.694547,60.3080911 L324.702666,51.3738496 L292.99947,51.3746291 C292.447478,51.3746291 292,50.9308997 292,50.3835318 C292,49.8361639 292.447478,49.3924345 292.99947,49.3924345 L324.46779,49.3916551 L315.694547,40.6919089 C315.30423,40.3048613 315.30423,39.6773332 315.694547,39.2902857 C316.084865,38.9032381 316.717694,38.9032381 317.108012,39.2902857 Z M327.115357,50.382693 L316.401279,61.0089027 L327.002151,50.5002046 L327.002252,50.4963719 L326.943142,50.442585 L326.882737,50.382693 L327.115357,50.382693 Z"
+                                                id="left-arrow"
+                                                transform="translate(310.000000, 50.500000) scale(-1, 1) translate(-310.000000, -50.500000) ">
+                                            </path>
+                                        </g>
                                     </g>
                                 </g>
-                            </g>
-                        </svg>
-                    </a></li>
+                            </svg>
+                        </a></li>
                 </ul>
             </nav>
         </header>
 
-        <section class="flex items-center justify-center flex-grow m-4 slide-top">
-            
-			<div class="grid grid-cols-4 grid-rows-5 gap-3">
-				<div class="rounded-lg img-container"><div class="rounded-lg image" id="img-1"></div></div>
-				<div class="rounded-lg img-container"><div class="rounded-lg image" id="img-2"></div></div>
-				<div class="rounded-lg img-container"><div class="rounded-lg image" id="img-3"></div></div>
-				<div class="rounded-lg img-container"><div class="rounded-lg image" id="img-4"></div></div>
-				<div class="rounded-lg img-container"><div class="rounded-lg image" id="img-5"></div></div>
-				<div class="rounded-lg img-container"><div class="rounded-lg image" id="img-6"></div></div>
-				<div class="rounded-lg img-container"><div class="rounded-lg image" id="img-7"></div></div>
-				<div class="rounded-lg img-container"><div class="rounded-lg image" id="img-8"></div></div>
-				<div class="rounded-lg img-container"><div class="rounded-lg image" id="img-9"></div></div>
-				<div class="rounded-lg img-container"><div class="rounded-lg image" id="img-10"></div></div>
-				<div class="rounded-lg img-container"><div class="rounded-lg image" id="img-11"></div></div>
-				<div class="rounded-lg img-container"><div class="rounded-lg image" id="img-12"></div></div>
-				<div class="rounded-lg img-container"><div class="rounded-lg image" id="img-13"></div></div>
-				<div class="rounded-lg img-container"><div class="rounded-lg image" id="img-14"></div></div>
-				<div class="rounded-lg img-container"><div class="rounded-lg image" id="img-15"></div></div>
-				<div class="rounded-lg img-container"><div class="rounded-lg image" id="img-16"></div></div>
-				<div class="rounded-lg img-container"><div class="rounded-lg image" id="img-17"></div></div>
-				<div class="rounded-lg img-container"><div class="rounded-lg image" id="img-18"></div></div>
-				<div class="rounded-lg img-container"><div class="rounded-lg image" id="img-19"></div></div>
-				<div class="rounded-lg img-container"><div class="rounded-lg image" id="img-20"></div></div>
-			</div>
-    
-		</section>
-        
+        <section class="slide-top art-container">
+
+            <div class="grid-container">
+
+                <div class="img-container">
+                    <div class="image img-1"></div>
+                </div>
+                <div class="img-container">
+                    <div class="image img-2"></div>
+                </div>
+                <div class="img-container">
+                    <div class="image img-3"></div>
+                </div>
+                <div class="img-container">
+                    <div class="image img-4"></div>
+                </div>
+                <div class="img-container">
+                    <div class="image img-5"></div>
+                </div>
+                <div class="img-container">
+                    <div class="image img-6"></div>
+                </div>
+                <div class="img-container">
+                    <div class="image img-7"></div>
+                </div>
+                <div class="img-container">
+                    <div class="image img-8"></div>
+                </div>
+                <div class="img-container">
+                    <div class="image img-9"></div>
+                </div>
+                <div class="img-container">
+                    <div class="image img-10"></div>
+                </div>
+                <div class="img-container">
+                    <div class="image img-11"></div>
+                </div>
+                <div class="img-container">
+                    <div class="image img-12"></div>
+                </div>
+                <div class="img-container">
+                    <div class="image img-13"></div>
+                </div>
+                <div class="img-container">
+                    <div class="image img-14"></div>
+                </div>
+                <div class="img-container">
+                    <div class="image img-15"></div>
+                </div>
+                <div class="img-container">
+                    <div class="image img-16"></div>
+                </div>
+                <div class="img-container">
+                    <div class="image img-17"></div>
+                </div>
+                <div class="img-container">
+                    <div class="image img-18"></div>
+                </div>
+                <div class="img-container">
+                    <div class="image img-19"></div>
+                </div>
+                <div class="img-container">
+                    <div class="image img-20"></div>
+                </div>
+            </div>
+
+        </section>
+
 
     </main>
-    
+
     <script src="public/scripts/transitions.js"></script>
     <script src="public/scripts/butter.js"></script>
 
