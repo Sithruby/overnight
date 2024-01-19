@@ -30,26 +30,41 @@ function pageTransition() {
 
 function contentAnimation() {
   var tl = gsap.timeline();
-  tl.from(".transition-this", {
-    duration: 1,
-    opacity: 0,
-    stagger: 0.2,
-    delay: 0.1,
-  });
+  tl.fromTo(
+    ".transition-this",
+    {
+      opacity: 0,
+    },
+    {
+      duration: 1,
+      opacity: 1,
+      stagger: 0.2,
+      delay: 0.1,
+    }
+  );
 }
 
 function slideIn() {
   var tl = gsap.timeline();
-  tl.from(
+  tl.fromTo(
     ".slide-in",
-    { duration: 2, transform: "translateX(-20px)", opacity: 0, stagger: .2 },
+    {
+      opacity: 0,
+      transform: "translateX(-25px)",
+    },
+    {
+      duration: 1,
+      transform: "translateX(0)",
+      opacity: 1,
+      stagger: 0.2
+    },
     "+=2"
   );
 }
 
 function fadeIn() {
   var tl = gsap.timeline();
-  tl.from(".fade-in", { duration: 2, opacity: 0, delay: 1 });
+  tl.from(".fade-in", { duration: 1, opacity: 0 });
 }
 
 function fadeOut() {
@@ -60,30 +75,53 @@ function fadeOut() {
 function herName() {
   var tl = gsap.timeline();
 
-  const typeSplit = new SplitType(".her-name", {
+  const typeSplit = new SplitType(".the-sweetest-name-ever", {
     types: "words, chars",
   });
 
   const chars = typeSplit.chars;
 
-  tl.from(chars, {
-    transform: "translateY(50px)",
-    opacity: 0,
-    duration: 3,
-    ease: "power4.inOut",
-    stagger: 0.05,
-    delay: 1,
-  });
-
+  tl.fromTo(
+    chars,
+    {
+      transform: "translateY(50px)",
+      opacity: 0,
+    },
+    {
+      transform: "translateY(0)",
+      opacity: 1,
+      duration: 3,
+      ease: "power4.inOut",
+      stagger: 0.05,
+      delay: 1,
+    }
+  );
 }
+
+// Set initial opacity to 0 in your CSS or HTML
+herName(); // Add this line to run the animation immediately
+
 
 function slideTop() {
   var tl = gsap.timeline();
-  tl.from(".slide-top", { duration: 2, opacity: 0, transform: "translateY(-30px)", stagger: .2, delay: 1 });
+  tl.fromTo(
+    ".slide-top",
+    {
+      opacity: 0,
+      transform: "translateY(30px)",
+    },
+    {
+      duration: 2,
+      opacity: 1,
+      transform: "translateY(0)",
+      stagger: .2,
+      delay: 1
+    }
+  );
 }
 
-$(function() {
-  barba.init( {
+$(function () {
+  barba.init({
     sync: true,
 
     transitions: [
@@ -109,7 +147,7 @@ $(function() {
           contentAnimation();
           herName();
           slideIn();
-		      slideTop();
+          slideTop();
         },
 
         async beforeLeave(data) {
@@ -124,6 +162,6 @@ $(function() {
   });
 
   barba.hooks.after(() => {
-    butter.init( { cancelOnTouch: true } );
+    butter.init({ cancelOnTouch: true });
   });
 });
