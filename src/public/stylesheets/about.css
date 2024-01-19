@@ -1,0 +1,91 @@
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    min-height: 80vh;
+}
+
+.a-logo-like-container {
+    width: min-content;
+}
+
+.whenever-i-see-this-i-get-butterflies {
+    padding-left: 0.25rem;
+    font-size: 1.25rem;
+    text-align: left;
+}
+
+.yet-again-the-sweetest-name-ever {
+    font-size: 6rem;
+    line-height: 1;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.its-hard-to-explain-with-words {
+    margin-top: 1rem;
+    text-align: right;
+    font-size: 1.25rem;
+}
+
+.a-sweet-short-story-container {
+    margin-top: 2rem;
+    width: 33.3%;
+}
+
+.a-sweet-short-story-container p {
+    font-size: 1.25rem;
+    text-align: justify;
+}
+
+.a-sweet-short-story-container p a {
+    color: rgb(109, 204, 255);
+}
+
+.social-logos {
+    margin-top: 2rem;
+    display: inline-flex;
+    row-gap: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .whenever-i-see-this-i-get-butterflies {
+        padding-left: 0.25rem;
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .yet-again-the-sweetest-name-ever {
+        font-size: 6rem;
+        text-align: left;
+    }
+
+    .its-hard-to-explain-with-words {
+        padding-right: 0.25rem;
+        text-align: right;
+        font-size: 1rem;
+    }
+
+    .a-sweet-short-story-container {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .yet-again-the-sweetest-name-ever {
+        font-size: 3rem;
+        text-align: left;
+    }
+
+    .its-hard-to-explain-with-words {
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    .a-sweet-short-story-container {
+        width: 90%;
+    }
+}
