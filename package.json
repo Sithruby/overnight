@@ -4,8 +4,10 @@
   "description": "",
   "scripts": {
     "start": "npx parcel src/index.html --port 1208 --open",
+    "build": "parcel build src/index.html --dist-dir ./docs --public-url https://sithruby.github.io/overnight/"
   },
   "keywords": [],
+  "author": "sithruby",
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.9.3"
