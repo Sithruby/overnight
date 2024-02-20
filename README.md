@@ -4,4 +4,3 @@
 
 I used HTML5, CSS3, Javascript along with jQuery, Barba JS, and GSAP libraries.
 
-Check out the live demo [here](https://samadhi1311.github.io/overnight/)
