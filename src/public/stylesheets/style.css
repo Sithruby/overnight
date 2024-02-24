@@ -118,7 +118,6 @@ main {
     background-size: cover;
     background-position: center;
     height: 100%;
-    border: #000;
 }
 
 .loading-screen {
